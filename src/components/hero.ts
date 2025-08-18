@@ -47,7 +47,7 @@ export function Hero(): string {
           </div>
           
           <!-- Thumbnail Gallery - Enhanced Mobile Experience -->
-          <div class="flex gap-2 overflow-x-auto pb-2 snap-x snap-mandatory scrollbar-hide">
+          <div class="relative flex gap-2 overflow-x-auto pb-2 snap-x snap-mandatory scrollbar-hide">
             <div class="relative flex-shrink-0 thumbnail-item border-2 border-cyan-500 rounded-md cursor-pointer hover:opacity-80 transition-all snap-start" data-type="video" data-src="/assets/trailer.mp4">
               <div class="w-32 h-24 sm:w-36 sm:h-28 bg-gray-900 rounded-md flex items-center justify-center">
                 <svg class="w-7 h-7 sm:w-8 sm:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -60,12 +60,13 @@ export function Hero(): string {
             <img src="/assets/images/gameplay3.jpg" alt="Screenshot 3" class="w-32 h-24 sm:w-36 sm:h-28 object-cover rounded-md cursor-pointer hover:opacity-80 transition-all thumbnail-item border-2 border-transparent snap-start" data-type="image" data-src="/assets/images/gameplay3.jpg">
             <img src="/assets/images/gameplay4.jpg" alt="Screenshot 4" class="w-32 h-24 sm:w-36 sm:h-28 object-cover rounded-md cursor-pointer hover:opacity-80 transition-all thumbnail-item border-2 border-transparent snap-start" data-type="image" data-src="/assets/images/gameplay4.jpg">
             
-            <!-- Navigation arrows - Hidden on mobile, shown on larger screens -->
-            <button class="hidden sm:flex flex-shrink-0 w-32 h-24 sm:w-36 sm:h-28 bg-gray-800/80 hover:bg-gray-700 dark:bg-gray-700/80 dark:hover:bg-gray-600 text-white rounded-md items-center justify-center transition-colors snap-start">
-              <svg class="w-8 h-8 sm:w-10 sm:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-              </svg>
-            </button>
+            <!-- Fixed Navigation Arrow - Always visible on right side -->
+            <div class="hidden sm:flex absolute right-0 top-0 w-8 h-24 sm:w-10 sm:h-28 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:from-cyan-500 dark:to-blue-500 dark:hover:from-cyan-600 dark:hover:to-blue-600 text-white rounded-r-lg shadow-lg hover:shadow-xl transition-all duration-300 border-l border-cyan-400/30 z-10">
+              <div class="flex flex-col items-center justify-center w-full h-full">
+                <span class="text-xs sm:text-sm font-bold mb-1">→</span>
+                <div class="w-1 h-8 sm:h-10 bg-white/20 rounded-full"></div>
+              </div>
+            </div>
           </div>
 
           <!-- About Game Section - Better Mobile Spacing -->
