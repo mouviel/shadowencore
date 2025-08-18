@@ -5,14 +5,14 @@ export function Hero(): string {
       <!-- Main Grid Layout -->
       <div class="grid lg:grid-cols-3 gap-6 lg:gap-8">
         
-        <!-- Left Side - Media Gallery -->
+        <!-- Left Side - Media Gallery -->  
         <div class="lg:col-span-2 order-2 lg:order-1">
           <!-- Main Game Image/Video -->
           <div class="relative mb-3 sm:mb-4 group" id="main-display">
-            <img id="main-image" src="https://placehold.co/800x450" alt="Shadow Encore" class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-lg shadow-2xl hidden">
+            <img id="main-image" src="https://placehold.co/800x450" alt="Shadow Encore Gameplay Screenshot" class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-lg shadow-2xl hidden" loading="lazy">
             <video id="main-video" 
               src="/assets/trailer.mp4" 
-              title="Shadow Encore Trailer"
+              title="Shadow Encore Official Game Trailer"
               class="w-full h-64 sm:h-80 md:h-96 rounded-lg shadow-2xl object-cover"
               controls
               preload="none"
@@ -55,10 +55,10 @@ export function Hero(): string {
                 </svg>
               </div>
             </div>
-            <img src="/assets/images/gameplay1.jpg" alt="Screenshot 1" class="w-32 h-24 sm:w-36 sm:h-28 object-cover rounded-md cursor-pointer hover:opacity-80 transition-all thumbnail-item border-2 border-transparent snap-start" data-type="image" data-src="/assets/images/gameplay1.jpg">
-            <img src="/assets/images/gameplay2.jpg" alt="Screenshot 2" class="w-32 h-24 sm:w-36 sm:h-28 object-cover rounded-md cursor-pointer hover:opacity-80 transition-all thumbnail-item border-2 border-transparent snap-start" data-type="image" data-src="/assets/images/gameplay2.jpg">
-            <img src="/assets/images/gameplay3.jpg" alt="Screenshot 3" class="w-32 h-24 sm:w-36 sm:h-28 object-cover rounded-md cursor-pointer hover:opacity-80 transition-all thumbnail-item border-2 border-transparent snap-start" data-type="image" data-src="/assets/images/gameplay3.jpg">
-            <img src="/assets/images/gameplay4.jpg" alt="Screenshot 4" class="w-32 h-24 sm:w-36 sm:h-28 object-cover rounded-md cursor-pointer hover:opacity-80 transition-all thumbnail-item border-2 border-transparent snap-start" data-type="image" data-src="/assets/images/gameplay4.jpg">
+            <img src="/assets/images/gameplay1.jpg" alt="Shadow Encore Gameplay Screenshot 1 - Blu fighting corrupted enemies" class="w-32 h-24 sm:w-36 sm:h-28 object-cover rounded-md cursor-pointer hover:opacity-80 transition-all thumbnail-item border-2 border-transparent snap-start" data-type="image" data-src="/assets/images/gameplay1.jpg" loading="lazy">
+            <img src="/assets/images/gameplay2.jpg" alt="Shadow Encore Gameplay Screenshot 2 - Platforming challenges in Talpa" class="w-32 h-24 sm:w-36 sm:h-28 object-cover rounded-md cursor-pointer hover:opacity-80 transition-all thumbnail-item border-2 border-transparent snap-start" data-type="image" data-src="/assets/images/gameplay2.jpg" loading="lazy">
+            <img src="/assets/images/gameplay3.jpg" alt="Shadow Encore Gameplay Screenshot 3 - Ancient Guardian abilities" class="w-32 h-24 sm:w-36 sm:h-28 object-cover rounded-md cursor-pointer hover:opacity-80 transition-all thumbnail-item border-2 border-transparent snap-start" data-type="image" data-src="/assets/images/gameplay3.jpg" loading="lazy">
+            <img src="/assets/images/gameplay4.jpg" alt="Shadow Encore Gameplay Screenshot 4 - Corrupted world environments" class="w-32 h-24 sm:w-36 sm:h-28 object-cover rounded-md cursor-pointer hover:opacity-80 transition-all thumbnail-item border-2 border-transparent snap-start" data-type="image" data-src="/assets/images/gameplay4.jpg" loading="lazy">
             
             <!-- Fixed Navigation Arrow - Always visible on right side -->
             <div class="hidden sm:flex absolute right-0 top-0 w-8 h-24 sm:w-10 sm:h-28 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:from-cyan-500 dark:to-blue-500 dark:hover:from-cyan-600 dark:hover:to-blue-600 text-white rounded-r-lg shadow-lg hover:shadow-xl transition-all duration-300 border-l border-cyan-400/30 z-10">
@@ -72,7 +72,7 @@ export function Hero(): string {
           <!-- About Game Section - Better Mobile Spacing -->
           <div class="mt-12 sm:mt-16 max-w-4xl mx-auto">
             <div class="mb-6 sm:mb-8">
-              <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 dark:text-gray-100 mb-3 sm:mb-4">About Game</h2>
+              <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 dark:text-gray-100 mb-3 sm:mb-4">About Shadow Encore</h2>
               <div class="w-12 sm:w-16 h-1 bg-gradient-to-r from-cyan-500 to-teal-500 dark:from-cyan-400 dark:to-teal-400"></div>
             </div>
             
@@ -100,10 +100,10 @@ export function Hero(): string {
         <div class="lg:col-span-1 order-1 lg:order-2">
           <!-- Game Logo/Title -->
           <div class="mb-4 sm:mb-6">
-            <img src="/assets/images/hereoimage.jpg" alt="Shadow Encore Logo" class="w-full max-w-sm h-32 sm:h-40 md:h-48 object-cover rounded-lg mb-4 mx-auto lg:mx-0">
+            <img src="/assets/images/hereoimage.jpg" alt="Shadow Encore Official Game Logo and Hero Image" class="w-full max-w-sm h-32 sm:h-40 md:h-48 object-cover rounded-lg mb-4 mx-auto lg:mx-0" loading="lazy">
           </div>
           
-          <!-- Game Title -->
+          <!-- Game Title - Main H1 for SEO -->
           <div class="mb-4 sm:mb-6 text-center lg:text-left">
             <h1 class="text-2xl sm:text-3xl lg:text-3xl font-bold text-gray-800 dark:text-gray-100 mb-4">Shadow Encore</h1>
           </div>
@@ -173,17 +173,17 @@ export function Hero(): string {
           <div class="mb-4 sm:mb-6">
             <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-3">Supported Languages:</p>
             <div class="flex flex-wrap gap-2 justify-center lg:justify-start">
-              <img src="https://flagcdn.com/w40/us.png" alt="English" class="w-6 h-4 sm:w-8 sm:h-6 object-cover rounded shadow-sm" title="English">
-              <img src="https://flagcdn.com/w40/es.png" alt="Spanish" class="w-6 h-4 sm:w-8 sm:h-6 object-cover rounded shadow-sm" title="Spanish">
-              <img src="https://flagcdn.com/w40/ru.png" alt="Russian" class="w-6 h-4 sm:w-8 sm:h-6 object-cover rounded shadow-sm" title="Russian">
-              <img src="https://flagcdn.com/w40/cn.png" alt="Chinese" class="w-6 h-4 sm:w-8 sm:h-6 object-cover rounded shadow-sm" title="Chinese">
-              <img src="https://flagcdn.com/w40/jp.png" alt="Japanese" class="w-6 h-4 sm:w-8 sm:h-6 object-cover rounded shadow-sm" title="Japanese">
-              <img src="https://flagcdn.com/w40/tr.png" alt="Turkish" class="w-6 h-4 sm:w-8 sm:h-6 object-cover rounded shadow-sm" title="Turkish">
-              <img src="https://flagcdn.com/w40/kr.png" alt="Korean" class="w-6 h-4 sm:w-8 sm:h-6 object-cover rounded shadow-sm" title="Korean">
-              <img src="https://flagcdn.com/w40/fr.png" alt="French" class="w-6 h-4 sm:w-8 sm:h-6 object-cover rounded shadow-sm" title="French">
-              <img src="https://flagcdn.com/w40/de.png" alt="German" class="w-6 h-4 sm:w-8 sm:h-6 object-cover rounded shadow-sm" title="German">
-              <img src="https://flagcdn.com/w40/pl.png" alt="Polish" class="w-6 h-4 sm:w-8 sm:h-6 object-cover rounded shadow-sm" title="Polish">
-              <img src="https://flagcdn.com/w40/cz.png" alt="Czech" class="w-6 h-4 sm:w-8 sm:h-6 object-cover rounded shadow-sm" title="Czech">
+              <img src="https://flagcdn.com/w40/us.png" alt="English Language Support" class="w-6 h-4 sm:w-8 sm:h-6 object-cover rounded shadow-sm" title="English" loading="lazy">
+              <img src="https://flagcdn.com/w40/es.png" alt="Spanish Language Support" class="w-6 h-4 sm:w-8 sm:h-6 object-cover rounded shadow-sm" title="Spanish" loading="lazy">
+              <img src="https://flagcdn.com/w40/ru.png" alt="Russian Language Support" class="w-6 h-4 sm:w-8 sm:h-6 object-cover rounded shadow-sm" title="Russian" loading="lazy">
+              <img src="https://flagcdn.com/w40/cn.png" alt="Chinese Language Support" class="w-6 h-4 sm:w-8 sm:h-6 object-cover rounded shadow-sm" title="Chinese" loading="lazy">
+              <img src="https://flagcdn.com/w40/jp.png" alt="Japanese Language Support" class="w-6 h-4 sm:w-8 sm:h-6 object-cover rounded shadow-sm" title="Japanese" loading="lazy">
+              <img src="https://flagcdn.com/w40/tr.png" alt="Turkish Language Support" class="w-6 h-4 sm:w-8 sm:h-6 object-cover rounded shadow-sm" title="Turkish" loading="lazy">
+              <img src="https://flagcdn.com/w40/kr.png" alt="Korean Language Support" class="w-6 h-4 sm:w-8 sm:h-6 object-cover rounded shadow-sm" title="Korean" loading="lazy">
+              <img src="https://flagcdn.com/w40/fr.png" alt="French Language Support" class="w-6 h-4 sm:w-8 sm:h-6 object-cover rounded shadow-sm" title="French" loading="lazy">
+              <img src="https://flagcdn.com/w40/de.png" alt="German Language Support" class="w-6 h-4 sm:w-8 sm:h-6 object-cover rounded shadow-sm" title="German" loading="lazy">
+              <img src="https://flagcdn.com/w40/pl.png" alt="Polish Language Support" class="w-6 h-4 sm:w-8 sm:h-6 object-cover rounded shadow-sm" title="Polish" loading="lazy">
+              <img src="https://flagcdn.com/w40/cz.png" alt="Czech Language Support" class="w-6 h-4 sm:w-8 sm:h-6 object-cover rounded shadow-sm" title="Czech" loading="lazy">
             </div>
           </div>
           

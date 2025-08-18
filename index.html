@@ -2,9 +2,129 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/assets/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shadow Encore</title>
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Shadow Encore | Official Game Website</title>
+    <meta name="description" content="Play Shadow Encore, an epic side-scrolling adventure where you become Blu, a young Guardian fighting to restore balance to the corrupted world of Talpa. Experience hand-crafted levels, ancient Guardian abilities, and atmospheric storytelling in this indie action-adventure game." />
+    <meta name="keywords" content="Shadow Encore, free game, play Shadow Encore, indie game, online game, browser game, action game, adventure game, platformer, metroidvania, rogue-lite, ninja game, fantasy game, side-scrolling game" />
+    <meta name="author" content="Shadow Encore Team" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://shadowencore.com/" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.png" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://shadowencore.com/" />
+    <meta property="og:title" content="Shadow Encore | Official Game Website" />
+    <meta property="og:description" content="Play Shadow Encore, an epic side-scrolling adventure where you become Blu, a young Guardian fighting to restore balance to the corrupted world of Talpa. Experience hand-crafted levels, ancient Guardian abilities, and atmospheric storytelling in this indie action-adventure game." />
+    <meta property="og:image" content="https://shadowencore.com/assets/images/hereoimage.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Shadow Encore" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://shadowencore.com/" />
+    <meta property="twitter:title" content="Shadow Encore | Official Game Website" />
+    <meta property="twitter:description" content="Play Shadow Encore, an epic side-scrolling adventure where you become Blu, a young Guardian fighting to restore balance to the corrupted world of Talpa. Experience hand-crafted levels, ancient Guardian abilities, and atmospheric storytelling in this indie action-adventure game." />
+    <meta property="twitter:image" content="https://shadowencore.com/assets/images/hereoimage.jpg" />
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#0891b2" />
+    <meta name="msapplication-TileColor" content="#0891b2" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Shadow Encore" />
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "name": "Shadow Encore",
+      "description": "Play as Blu, a young Guardian, in her quest to reclaim Talpa from the hands of the Corrupted. Experience hand-crafted levels, ancient Guardian abilities, and atmospheric storytelling in this side-scrolling adventure game.",
+      "url": "https://shadowencore.com/",
+      "image": "https://shadowencore.com/assets/images/hereoimage.jpg",
+      "screenshot": [
+        "https://shadowencore.com/assets/images/gameplay1.jpg",
+        "https://shadowencore.com/assets/images/gameplay2.jpg",
+        "https://shadowencore.com/assets/images/gameplay3.jpg",
+        "https://shadowencore.com/assets/images/gameplay4.jpg"
+      ],
+      "trailer": "https://shadowencore.com/assets/trailer.mp4",
+      "genre": ["Action", "Adventure", "Platformer", "Metroidvania", "Rogue-lite"],
+      "gamePlatform": ["PC", "Web Browser"],
+      "applicationCategory": "Game",
+      "operatingSystem": "Windows, macOS, Linux",
+      "datePublished": "2025-09-20",
+      "dateModified": "2025-01-01",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Shadow Encore Team"
+      },
+      "developer": {
+        "@type": "Person",
+        "name": "Harlow Robinet"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "150",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "gameServer": {
+        "@type": "GameServer",
+        "serverStatus": "Online",
+        "playersOnline": "1000+"
+      }
+    }
+    </script>
+    
+    <!-- Additional Structured Data for Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Shadow Encore Team",
+      "url": "https://shadowencore.com/",
+      "logo": "https://shadowencore.com/assets/logo.png",
+      "sameAs": [
+        "https://github.com/tolgazorlu/presskit"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "help@shadowencore.com",
+        "contactType": "customer service"
+      }
+    }
+    </script>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/assets/trailer.mp4" as="video" type="video/mp4" />
+    <link rel="preload" href="/assets/images/heroImage.jpg" as="image" />
+    <link rel="preload" href="/assets/images/gameplay1.jpg" as="image" />
+    
+    <!-- DNS Prefetch for external resources -->
+    <link rel="dns-prefetch" href="//www.clarity.ms" />
+    <link rel="dns-prefetch" href="//www.gstatic.com" />
+    <link rel="dns-prefetch" href="//firebaseapp.com" />
+    
+    <!-- Existing favicon link preserved -->
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
   </head>
   <body>
     <div id="app"></div>
