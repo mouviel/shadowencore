@@ -15,7 +15,7 @@ export function Hero(): string {
               title="Shadow Encore Trailer"
               class="w-full h-64 sm:h-80 md:h-96 rounded-lg shadow-2xl object-cover"
               controls
-              preload="metadata"
+              preload="none"
               muted
               poster="/assets/images/gameplay1.jpg"
               onload="this.style.opacity='1'"
@@ -23,23 +23,17 @@ export function Hero(): string {
               Your browser does not support the video tag.
             </video>
             
-            <!-- Loading placeholder - shows while video loads -->
-            <div id="video-loading" class="absolute inset-0 bg-gray-900 rounded-lg shadow-2xl flex items-center justify-center">
-              <div class="text-center text-white">
-                <div class="w-12 h-12 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-                <p class="text-sm">Loading trailer...</p>
-              </div>
-            </div>
-            <!-- Fallback for when iframe fails -->
-            <div id="video-fallback" class="w-full h-64 sm:h-80 md:h-96 bg-gradient-to-br from-blue-900 to-purple-900 rounded-lg shadow-2xl flex items-center justify-center cursor-pointer group hidden" onclick="window.open('https://www.youtube.com/watch?v=77248MsuRfo', '_blank')">
+
+            <!-- Fallback for when video fails -->
+            <div id="video-fallback" class="w-full h-64 sm:h-80 md:h-96 bg-gradient-to-br from-blue-900 to-purple-900 rounded-lg shadow-2xl flex items-center justify-center cursor-pointer group hidden" onclick="document.getElementById('main-video').play()">
               <div class="text-center p-4">
-                <div class="w-16 h-16 sm:w-20 sm:h-20 bg-red-600 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:bg-red-700 transition-colors">
+                <div class="w-16 h-16 sm:w-20 sm:h-20 bg-cyan-600 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:bg-cyan-700 transition-colors">
                   <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </div>
-                <h3 class="text-white text-lg sm:text-xl font-semibold mb-2">Watch on YouTube</h3>
-                <p class="text-gray-300 text-sm">Click to view the trailer</p>
+                <h3 class="text-white text-lg sm:text-xl font-semibold mb-2">Click to Play Video</h3>
+                <p class="text-gray-300 text-sm">Video failed to load automatically</p>
               </div>
             </div>
             <!-- Play Button Overlay (only shows for image) -->
@@ -208,17 +202,19 @@ export function setupMediaGallery() {
   const mainVideo = document.querySelector<HTMLVideoElement>('#main-video')
   const playOverlay = document.querySelector<HTMLElement>('#play-overlay')
   
-  // Auto-play video immediately
+  // Auto-play video after user interaction or when ready
   if (mainVideo) {
-    // Hide loading state when video can play
+    // Wait for video to be ready before auto-playing
     mainVideo.addEventListener('canplay', () => {
-      const loadingElement = document.getElementById('video-loading')
-      if (loadingElement) {
-        loadingElement.style.display = 'none'
-      }
+      mainVideo.play().catch(e => console.log('Auto-play prevented:', e))
     })
     
-    mainVideo.play().catch(e => console.log('Auto-play prevented:', e))
+    // Fallback: try to play after a short delay
+    setTimeout(() => {
+      if (mainVideo.readyState >= 2) { // HAVE_CURRENT_DATA
+        mainVideo.play().catch(e => console.log('Auto-play prevented:', e))
+      }
+    }, 1000)
   }
 
   thumbnailItems.forEach((item) => {
