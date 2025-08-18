@@ -278,7 +278,7 @@ export function setupMediaGallery() {
 // Function to download the game
 export function downloadGame() {
   // Game file path - update this to your actual game file
-  const gameFile = '/assets/games/shadow-encore-game.rar'
+  const gameFile = '/assets/games/ShadowEncore.rar'
   
   // Create a new tab for download
   const downloadTab = window.open(gameFile, '_blank')
@@ -293,7 +293,7 @@ export function downloadGame() {
   // Alternative: Direct download without opening new tab
   // const link = document.createElement('a')
   // link.href = gameFile
-  // link.download = 'Shadow-Encore-Game.rar'
+  // link.download = 'ShadowEncore.rar'
   // link.style.display = 'none'
   // document.body.appendChild(link)
   // link.click()
