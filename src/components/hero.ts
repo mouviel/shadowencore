@@ -1,6 +1,6 @@
 export function Hero(): string {
   return `
-    <section class="max-w-7xl px-3 sm:px-4 md:px-6 lg:px-8 mx-auto w-full relative pt-28 sm:pt-32 lg:pt-36 mb-8 sm:mb-12">
+    <section class="max-w-7xl px-3 sm:px-4 md:px-6 lg:px-8 mx-auto w-full relative pt-32 sm:pt-36 lg:pt-40 mb-8 sm:mb-12">
       
       <!-- Main Grid Layout -->
       <div class="grid lg:grid-cols-3 gap-6 lg:gap-8">
