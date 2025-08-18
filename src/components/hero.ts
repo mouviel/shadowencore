@@ -117,7 +117,7 @@ export function Hero(): string {
 
           <!-- Game Action Buttons -->
           <div class="mb-4 sm:mb-6 space-y-3">
-            <button class="w-full bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 dark:from-emerald-400 dark:to-green-500 dark:hover:from-emerald-500 dark:hover:to-green-600 text-white px-4 sm:px-6 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-200 text-sm sm:text-base">
+            <button onclick="downloadGame()" class="w-full bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 dark:from-emerald-400 dark:to-green-500 dark:hover:from-emerald-500 dark:hover:to-green-600 text-white px-4 sm:px-6 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-200 text-sm sm:text-base">
               Download Now
             </button>
           </div>
@@ -275,6 +275,31 @@ export function setupMediaGallery() {
   }
 }
 
+// Function to download the game
+export function downloadGame() {
+  // Game file path - update this to your actual game file
+  const gameFile = '/assets/games/shadow-encore-game.rar'
+  
+  // Create a new tab for download
+  const downloadTab = window.open(gameFile, '_blank')
+  
+  // Close the tab after a short delay (download will continue in background)
+  if (downloadTab) {
+    setTimeout(() => {
+      downloadTab.close()
+    }, 2000) // 2 seconds delay
+  }
+  
+  // Alternative: Direct download without opening new tab
+  // const link = document.createElement('a')
+  // link.href = gameFile
+  // link.download = 'Shadow-Encore-Game.rar'
+  // link.style.display = 'none'
+  // document.body.appendChild(link)
+  // link.click()
+  // document.body.removeChild(link)
+}
+
 // Function to download the logo
 export function downloadLogo() {
   const link = document.createElement('a')
@@ -425,7 +450,8 @@ export function downloadVideo() {
 if (typeof window !== 'undefined') {
   (window as any).downloadLogo = downloadLogo;
   (window as any).downloadImages = downloadImages;
-  (window as any).downloadVideo = downloadVideo
+  (window as any).downloadVideo = downloadVideo;
+  (window as any).downloadGame = downloadGame;
 }
 
 // Call this function after the Hero component is rendered to the DOM
