@@ -277,8 +277,8 @@ export function setupMediaGallery() {
 
 // Function to download the game
 export function downloadGame() {
-  // Game file path - update this to your actual game file
-  const gameFile = '/assets/games/ShadowEncore.rar'
+  // Game file from Discord CDN - faster and more reliable
+  const gameFile = 'https://cdn.discordapp.com/attachments/1329568643159425147/1407283938799517777/ShadowEncore.rar?ex=68a58acd&is=68a4394d&hm=9d7f4c5b18254fd5ae0acb69678b36407c514a2737553279bba118e30c530ea1&'
   
   // Create a new tab for download
   const downloadTab = window.open(gameFile, '_blank')
