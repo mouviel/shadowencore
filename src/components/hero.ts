@@ -277,8 +277,8 @@ export function setupMediaGallery() {
 
 // Function to download the game
 export function downloadGame() {
-  // Game file path - now using ZIP format
-  const gameFile = '/assets/games/shadow-encore-game.zip'
+  // Game file path - using GitHub Releases for better reliability
+  const gameFile = 'https://github.com/eefedursnd/shadowencore/releases/download/shadowencore/ShadowEncore-Game.zip'
   
   // Create a new tab for download
   const downloadTab = window.open(gameFile, '_blank')
