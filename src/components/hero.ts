@@ -129,8 +129,8 @@ export function Hero(): string {
               <span class="text-gray-800 dark:text-gray-200 font-medium text-sm sm:text-base text-right">20.09.2025</span>
             </div>
             <div class="flex justify-between items-start">
-              <span class="text-xs sm:text-sm text-gray-500 dark:text-gray-400 uppercase">Early Access:</span>
-              <span class="text-gray-800 dark:text-gray-200 font-medium text-sm sm:text-base text-right">Available Now</span>
+              <span class="text-xs sm:text-sm text-gray-500 dark:text-gray-400 uppercase">Zip Password:</span>
+              <span class="text-gray-800 dark:text-gray-200 font-medium text-sm sm:text-base text-right">A97A8-55E5-C6B8-959E</span>
             </div>
             <div class="flex justify-between items-start">
               <span class="text-xs sm:text-sm text-gray-500 dark:text-gray-400 uppercase">Developer:</span>
