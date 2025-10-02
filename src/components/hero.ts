@@ -18,7 +18,7 @@ export function Hero(): string {
               preload="none"
               muted
               poster="/assets/images/gameplay1.jpg"
-              onload="this.style.opacity='1'"
+              onload="this.style.opacity='1'"97A8-55E5-C6B8-959E
               onerror="this.style.display='none'; document.getElementById('video-fallback').style.display='block'">
               Your browser does not support the video tag.
             </video>
@@ -130,7 +130,7 @@ export function Hero(): string {
             </div>
             <div class="flex justify-between items-start">
               <span class="text-xs sm:text-sm text-gray-500 dark:text-gray-400 uppercase">Zip Password:</span>
-              <span class="text-gray-800 dark:text-gray-200 font-medium text-sm sm:text-base text-right">A97A8-55E5-C6B8-959E</span>
+              <span class="text-gray-800 dark:text-gray-200 font-medium text-sm sm:text-base text-right">97A8-55E5-C6B8-959E</span>
             </div>
             <div class="flex justify-between items-start">
               <span class="text-xs sm:text-sm text-gray-500 dark:text-gray-400 uppercase">Developer:</span>
