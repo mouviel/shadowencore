@@ -4,4 +4,4 @@ User-agent: *
 Allow: /
 
 # Sitemap location (helps search engines discover all pages)
-Sitemap: https://razordshard.com/sitemap.xml
+Sitemap: https://razorshard.com/sitemap.xml

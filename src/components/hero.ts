@@ -148,9 +148,9 @@ export function Hero(): string {
               </div>
               <div class="min-w-0 flex-1">
                 <p class="text-xs text-gray-500 dark:text-gray-400 uppercase">Contact Mail</p>
-                <button onclick="navigator.clipboard.writeText('help@razordshard.com'); this.innerHTML='✓ Copied!'; setTimeout(() => this.innerHTML='help@razordshard.com', 2000)" 
+                <button onclick="navigator.clipboard.writeText('help@razorshard.com'); this.innerHTML='✓ Copied!'; setTimeout(() => this.innerHTML='help@razorshard.com', 2000)" 
                         class="text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300 font-medium transition-colors duration-200 text-sm sm:text-base truncate block w-full text-left">
-                  help@razordshard.com
+                  help@razorshard.com
                 </button>
               </div>
             </div>
