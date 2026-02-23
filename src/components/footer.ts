@@ -5,7 +5,7 @@ export const Footer = () => {
   <!-- Grid -->
   <div class="text-center">
     <div>
-      <a class="flex-none text-lg sm:text-xl font-semibold text-white dark:text-gray-100" href="#" aria-label="Brand">Shadow Encore</a>
+      <a class="flex-none text-lg sm:text-xl font-semibold text-white dark:text-gray-100" href="#" aria-label="Brand">Razord Shard</a>
     </div>
     <!-- End Col -->
 

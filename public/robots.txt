@@ -1,0 +1,7 @@
+# Razord Shard - Official Game Website
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location (helps search engines discover all pages)
+Sitemap: https://razordshard.com/sitemap.xml
