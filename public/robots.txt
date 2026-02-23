@@ -1,4 +1,4 @@
-# Razord Shard - Official Game Website
+# Razor Shard - Official Game Website
 # Allow all crawlers
 User-agent: *
 Allow: /

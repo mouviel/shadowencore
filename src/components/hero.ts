@@ -9,10 +9,10 @@ export function Hero(): string {
         <div class="lg:col-span-2 order-2 lg:order-1">
           <!-- Main Game Image/Video -->
           <div class="relative mb-3 sm:mb-4 group" id="main-display">
-            <img id="main-image" src="https://placehold.co/800x450" alt="Razord Shard Gameplay Screenshot" class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-lg shadow-2xl hidden" loading="lazy">
+            <img id="main-image" src="https://placehold.co/800x450" alt="Razor Shard gameplay screenshot" class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-lg shadow-2xl hidden" loading="lazy">
             <video id="main-video" 
               src="/assets/trailer.mp4" 
-              title="Razord Shard Official Game Trailer"
+              title="Razor Shard official game trailer"
               class="w-full h-64 sm:h-80 md:h-96 rounded-lg shadow-2xl object-cover"
               controls
               preload="none"
@@ -55,10 +55,10 @@ export function Hero(): string {
                 </svg>
               </div>
             </div>
-            <img src="/assets/images/gameplay1.jpg" alt="Razord Shard Gameplay Screenshot 1 - Blu fighting corrupted enemies" class="w-32 h-24 sm:w-36 sm:h-28 object-cover rounded-md cursor-pointer hover:opacity-80 transition-all thumbnail-item border-2 border-transparent snap-start" data-type="image" data-src="/assets/images/gameplay1.jpg" loading="lazy">
-            <img src="/assets/images/gameplay2.jpg" alt="Razord Shard Gameplay Screenshot 2 - Platforming challenges in Talpa" class="w-32 h-24 sm:w-36 sm:h-28 object-cover rounded-md cursor-pointer hover:opacity-80 transition-all thumbnail-item border-2 border-transparent snap-start" data-type="image" data-src="/assets/images/gameplay2.jpg" loading="lazy">
-            <img src="/assets/images/gameplay3.jpg" alt="Razord Shard Gameplay Screenshot 3 - Ancient Guardian abilities" class="w-32 h-24 sm:w-36 sm:h-28 object-cover rounded-md cursor-pointer hover:opacity-80 transition-all thumbnail-item border-2 border-transparent snap-start" data-type="image" data-src="/assets/images/gameplay3.jpg" loading="lazy">
-            <img src="/assets/images/gameplay4.jpg" alt="Razord Shard Gameplay Screenshot 4 - Corrupted world environments" class="w-32 h-24 sm:w-36 sm:h-28 object-cover rounded-md cursor-pointer hover:opacity-80 transition-all thumbnail-item border-2 border-transparent snap-start" data-type="image" data-src="/assets/images/gameplay4.jpg" loading="lazy">
+            <img src="/assets/images/gameplay1.jpg" alt="Razor Shard gameplay screenshot 1 - Blu fighting corrupted enemies" class="w-32 h-24 sm:w-36 sm:h-28 object-cover rounded-md cursor-pointer hover:opacity-80 transition-all thumbnail-item border-2 border-transparent snap-start" data-type="image" data-src="/assets/images/gameplay1.jpg" loading="lazy">
+            <img src="/assets/images/gameplay2.jpg" alt="Razor Shard gameplay screenshot 2 - Platforming challenges in Talpa" class="w-32 h-24 sm:w-36 sm:h-28 object-cover rounded-md cursor-pointer hover:opacity-80 transition-all thumbnail-item border-2 border-transparent snap-start" data-type="image" data-src="/assets/images/gameplay2.jpg" loading="lazy">
+            <img src="/assets/images/gameplay3.jpg" alt="Razor Shard gameplay screenshot 3 - Ancient Guardian abilities" class="w-32 h-24 sm:w-36 sm:h-28 object-cover rounded-md cursor-pointer hover:opacity-80 transition-all thumbnail-item border-2 border-transparent snap-start" data-type="image" data-src="/assets/images/gameplay3.jpg" loading="lazy">
+            <img src="/assets/images/gameplay4.jpg" alt="Razor Shard gameplay screenshot 4 - Corrupted world environments" class="w-32 h-24 sm:w-36 sm:h-28 object-cover rounded-md cursor-pointer hover:opacity-80 transition-all thumbnail-item border-2 border-transparent snap-start" data-type="image" data-src="/assets/images/gameplay4.jpg" loading="lazy">
             
             <!-- Fixed Navigation Arrow - Always visible on right side -->
             <div class="hidden sm:flex absolute right-0 top-0 w-8 h-24 sm:w-10 sm:h-28 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 dark:from-cyan-500 dark:to-blue-500 dark:hover:from-cyan-600 dark:hover:to-blue-600 text-white rounded-r-lg shadow-lg hover:shadow-xl transition-all duration-300 border-l border-cyan-400/30 z-10">
@@ -72,13 +72,13 @@ export function Hero(): string {
           <!-- About Game Section - Better Mobile Spacing -->
           <div class="mt-12 sm:mt-16 max-w-4xl mx-auto">
             <div class="mb-6 sm:mb-8">
-              <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 dark:text-gray-100 mb-3 sm:mb-4">About Razord Shard</h2>
+              <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 dark:text-gray-100 mb-3 sm:mb-4">About Razor Shard</h2>
               <div class="w-12 sm:w-16 h-1 bg-gradient-to-r from-cyan-500 to-teal-500 dark:from-cyan-400 dark:to-teal-400"></div>
             </div>
             
             <div class="prose prose-sm sm:prose-lg max-w-none text-gray-700 dark:text-gray-300">
               <p class="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6 text-gray-700 dark:text-gray-300">
-                The noble Guardians who upheld balance in Talpa, have all but fallen to corruption. The fate of the world now rests in the last of this dying order. Welcome to <strong class="text-gray-800 dark:text-gray-100">Razord Shard</strong>, where the fate of an entire world hangs in the balance.
+                The noble Guardians who upheld balance in Talpa, have all but fallen to corruption. The fate of the world now rests in the last of this dying order. Welcome to <strong class="text-gray-800 dark:text-gray-100">Razor Shard</strong>, where the fate of an entire world hangs in the balance.
               </p>
               
               <p class="leading-relaxed mb-4 sm:mb-6 text-gray-700 dark:text-gray-300">
@@ -90,7 +90,7 @@ export function Hero(): string {
               </p>
               
               <p class="leading-relaxed text-gray-700 dark:text-gray-300">
-                Whether you're a seasoned platformer or new to the genre, Razord Shard offers the perfect blend of challenging gameplay, atmospheric storytelling, and beautiful hand-crafted environments. Join Blu in her quest to restore the world of Talpa and become the Guardian this corrupted realm desperately needs.
+                Whether you're a seasoned platformer or new to the genre, Razor Shard offers the perfect blend of challenging gameplay, atmospheric storytelling, and beautiful hand-crafted environments. Join Blu in her quest to restore the world of Talpa and become the Guardian this corrupted realm desperately needs.
               </p>
             </div>
           </div>
@@ -100,12 +100,12 @@ export function Hero(): string {
         <div class="lg:col-span-1 order-1 lg:order-2">
           <!-- Game Logo/Title -->
           <div class="mb-4 sm:mb-6">
-            <img src="/assets/images/hereoimage.jpg" alt="Razord Shard Official Game Logo and Hero Image" class="w-full max-w-sm h-32 sm:h-40 md:h-48 object-cover rounded-lg mb-4 mx-auto lg:mx-0" loading="lazy">
+            <img src="/assets/images/hereoimage.jpg" alt="Razor Shard official game logo and hero image" class="w-full max-w-sm h-32 sm:h-40 md:h-48 object-cover rounded-lg mb-4 mx-auto lg:mx-0" loading="lazy">
           </div>
           
           <!-- Game Title - Main H1 for SEO -->
           <div class="mb-4 sm:mb-6 text-center lg:text-left">
-            <h1 class="text-2xl sm:text-3xl lg:text-3xl font-bold text-gray-800 dark:text-gray-100 mb-4">Razord Shard</h1>
+            <h1 class="text-2xl sm:text-3xl lg:text-3xl font-bold text-gray-800 dark:text-gray-100 mb-4">Razor Shard</h1>
           </div>
           
           <!-- Game Description -->
@@ -304,7 +304,7 @@ export function downloadGame() {
 export function downloadLogo() {
   const link = document.createElement('a')
   link.href = '/assets/logo.png'
-  link.download = 'RazordShard-logo.png'
+  link.download = 'RazorShard-logo.png'
   document.body.appendChild(link)
   link.click()
   document.body.removeChild(link)
