@@ -1,12 +1,12 @@
 export function Hero(): string {
   return `
-    <section class="max-w-7xl px-3 sm:px-4 md:px-6 lg:px-8 mx-auto w-full relative pt-32 sm:pt-36 lg:pt-40 mb-8 sm:mb-12">
+    <section class="max-w-7xl px-3 sm:px-4 md:px-6 lg:px-8 mx-auto w-full relative pt-32 sm:pt-36 lg:pt-40 mb-8 sm:mb-12" data-aos="fade-up">
       
       <!-- Main Grid Layout -->
       <div class="grid lg:grid-cols-3 gap-6 lg:gap-8">
         
         <!-- Left Side - Media Gallery -->  
-        <div class="lg:col-span-2 order-2 lg:order-1">
+        <div class="lg:col-span-2 order-2 lg:order-1" data-aos="fade-right" data-aos-delay="100">
           <!-- Main Game Image/Video -->
           <div class="relative mb-3 sm:mb-4 group" id="main-display">
             <img id="main-image" src="https://placehold.co/800x450" alt="Razor Shard gameplay screenshot" class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-lg shadow-2xl hidden" loading="lazy">
@@ -18,7 +18,7 @@ export function Hero(): string {
               preload="none"
               muted
               poster="/assets/images/gameplay1.jpg"
-              onload="this.style.opacity='1'"97A8-55E5-C6B8-959E
+              onload="this.style.opacity='1'"
               onerror="this.style.display='none'; document.getElementById('video-fallback').style.display='block'">
               Your browser does not support the video tag.
             </video>
@@ -70,7 +70,7 @@ export function Hero(): string {
           </div>
 
           <!-- About Game Section - Better Mobile Spacing -->
-          <div class="mt-12 sm:mt-16 max-w-4xl mx-auto">
+          <div class="mt-12 sm:mt-16 max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="200">
             <div class="mb-6 sm:mb-8">
               <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 dark:text-gray-100 mb-3 sm:mb-4">About Razor Shard</h2>
               <div class="w-12 sm:w-16 h-1 bg-gradient-to-r from-cyan-500 to-teal-500 dark:from-cyan-400 dark:to-teal-400"></div>
@@ -97,7 +97,7 @@ export function Hero(): string {
         </div>
         
         <!-- Right Side - Game Information -->
-        <div class="lg:col-span-1 order-1 lg:order-2">
+        <div class="lg:col-span-1 order-1 lg:order-2" data-aos="fade-left" data-aos-delay="150">
           <!-- Game Logo/Title -->
           <div class="mb-4 sm:mb-6">
             <img src="/assets/images/hereoimage.jpg" alt="Razor Shard official game logo and hero image" class="w-full max-w-sm h-32 sm:h-40 md:h-48 object-cover rounded-lg mb-4 mx-auto lg:mx-0" loading="lazy">

@@ -1,7 +1,7 @@
 export const Footer = () => {
   return `
     <!-- ========== FOOTER ========== -->
-<footer id="footer" class="mt-auto w-full py-8 sm:py-10 px-4 sm:px-6 lg:px-8 mx-auto bg-gradient-to-r from-slate-800 via-slate-900 to-gray-900 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+<footer id="footer" class="mt-auto w-full py-8 sm:py-10 px-4 sm:px-6 lg:px-8 mx-auto bg-gradient-to-r from-slate-800 via-slate-900 to-gray-900 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900" data-aos="fade-up">
   <!-- Grid -->
   <div class="text-center">
     <div>
