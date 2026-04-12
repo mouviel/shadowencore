@@ -277,16 +277,6 @@ export function setupMediaGallery() {
   }
 }
 
-// Function to download the logo
-export function downloadLogo() {
-  const link = document.createElement('a')
-  link.href = '/assets/logo.png'
-  link.download = 'RazorShard-logo.png'
-  document.body.appendChild(link)
-  link.click()
-  document.body.removeChild(link)
-}
-
 // Function to download all images as a zip file
 export async function downloadImages() {
   try {
@@ -425,7 +415,6 @@ export function downloadVideo() {
 
 // Make functions available globally
 if (typeof window !== 'undefined') {
-  (window as any).downloadLogo = downloadLogo;
   (window as any).downloadImages = downloadImages;
   (window as any).downloadVideo = downloadVideo;
 }

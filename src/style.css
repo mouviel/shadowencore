@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* Ensure scroll/animated layers never swallow clicks (AOS uses transforms). */
+[data-aos] {
+  pointer-events: auto;
+}
+
 html {
   scroll-behavior: smooth;
 }

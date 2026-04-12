@@ -1,9 +1,11 @@
+import { routes } from '../routes.ts'
+
 export function Footer(): string {
   return `
-    <footer id="footer" class="mt-auto w-full py-12 sm:py-14 px-4 sm:px-6 lg:px-8 mx-auto bg-gradient-to-b from-slate-900 to-slate-950 text-gray-300" data-aos="fade-up">
+    <footer id="footer" class="relative z-20 mt-auto w-full py-12 sm:py-14 px-4 sm:px-6 lg:px-8 mx-auto bg-gradient-to-b from-slate-900 to-slate-950 text-gray-300 pointer-events-auto" data-aos="fade-up">
       <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
         <div>
-          <a class="inline-flex text-xl font-bold text-white hover:text-cyan-300 transition-colors" href="#top" aria-label="Razor Shard home">Razor Shard</a>
+          <a class="relative z-10 inline-flex text-xl font-bold text-white hover:text-cyan-300 transition-colors" href="${routes.home}" aria-label="Razor Shard home">Razor Shard</a>
           <p class="mt-3 text-sm text-gray-400 leading-relaxed max-w-xs">
             Side-scrolling action-adventure: play as Blu, reclaim Talpa from the Corrupted, alone or in local co-op.
           </p>
@@ -11,18 +13,19 @@ export function Footer(): string {
         <div>
           <h3 class="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4">Explore</h3>
           <ul class="space-y-2 text-sm">
-            <li><a class="text-gray-300 hover:text-cyan-400 transition-colors" href="#about">About</a></li>
-            <li><a class="text-gray-300 hover:text-cyan-400 transition-colors" href="#features">Features</a></li>
-            <li><a class="text-gray-300 hover:text-cyan-400 transition-colors" href="#screenshots">Screenshots</a></li>
-            <li><button type="button" class="text-left text-gray-300 hover:text-cyan-400 transition-colors cursor-pointer bg-transparent border-0 p-0 font-inherit" onclick="downloadGame()">Download</button></li>
+            <li><a class="relative z-10 inline-block py-1 text-gray-300 hover:text-cyan-400 transition-colors" href="${routes.about}">About</a></li>
+            <li><a class="relative z-10 inline-block py-1 text-gray-300 hover:text-cyan-400 transition-colors" href="${routes.features}">Features</a></li>
+            <li><a class="relative z-10 inline-block py-1 text-gray-300 hover:text-cyan-400 transition-colors" href="${routes.screenshots}">Screenshots</a></li>
+            <li><a class="relative z-10 inline-block py-1 text-gray-300 hover:text-cyan-400 transition-colors" href="${routes.faq}">FAQ</a></li>
+            <li><a class="relative z-10 inline-block py-1 text-gray-300 hover:text-cyan-400 transition-colors" href="${routes.changelog}">Changelog</a></li>
+            <li><a class="relative z-10 inline-block py-1 text-gray-300 hover:text-cyan-400 transition-colors" href="${routes.privacy}">Privacy &amp; cookies</a></li>
+            <li><button type="button" class="relative z-10 text-left py-1 text-gray-300 hover:text-cyan-400 transition-colors cursor-pointer bg-transparent border-0 p-0 font-inherit" onclick="downloadGame()">Download</button></li>
           </ul>
         </div>
         <div>
-          <h3 class="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4">Support &amp; press</h3>
+          <h3 class="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4">Support</h3>
           <ul class="space-y-2 text-sm">
-            <li><a class="text-cyan-400 hover:text-cyan-300 transition-colors" href="mailto:help@razorshard.com">help@razorshard.com</a></li>
-            <li><a class="text-gray-300 hover:text-cyan-400 transition-colors" href="https://github.com/tolgazorlu/presskit" target="_blank" rel="noopener noreferrer">Press kit (GitHub)</a></li>
-            <li><button type="button" class="text-left text-gray-300 hover:text-cyan-400 transition-colors cursor-pointer bg-transparent border-0 p-0 font-inherit" onclick="downloadLogo()">Download logo</button></li>
+            <li><a class="relative z-10 inline-block py-1 text-cyan-400 hover:text-cyan-300 transition-colors" href="mailto:help@razorshard.com">help@razorshard.com</a></li>
           </ul>
         </div>
       </div>

@@ -2,11 +2,15 @@ import './style.css'
 import 'aos/dist/aos.css'
 import AOS from 'aos'
 import { inject } from '@vercel/analytics'
+import { getSitePage } from './routes.ts'
 import { Header } from './components/header.ts'
 import { BackgroundHero } from './components/backgroundHero.ts'
 import { Hero, setupMediaGallery } from './components/hero.ts'
 import { Features } from './components/features.ts'
 import { Screenshots, setupScreenshotLightbox } from './components/screenshots.ts'
+import { Faq } from './components/faq.ts'
+import { Changelog } from './components/changelog.ts'
+import { Privacy } from './components/privacy.ts'
 import { Footer } from './components/footer.ts'
 import { setupDownloadModal } from './components/downloadModal.ts'
 
@@ -14,13 +18,33 @@ inject({
   mode: import.meta.env.DEV ? 'development' : 'production',
 })
 
+const page = getSitePage()
+
+let mainHtml = ''
+switch (page) {
+  case 'home':
+    mainHtml = `${Hero()}${Features()}${Screenshots()}`
+    break
+  case 'faq':
+    mainHtml = Faq()
+    break
+  case 'changelog':
+    mainHtml = Changelog()
+    break
+  case 'privacy':
+    mainHtml = Privacy()
+    break
+  default:
+    mainHtml = `${Hero()}${Features()}${Screenshots()}`
+}
+
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  ${Header()}
-  ${BackgroundHero()}
-  ${Hero()}
-  ${Features()}
-  ${Screenshots()}
-  ${Footer()}
+  <div class="relative z-10 isolate flex min-h-screen flex-col">
+    ${Header(page)}
+    ${BackgroundHero()}
+    <div class="relative z-10 flex flex-1 flex-col">${mainHtml}</div>
+    ${Footer()}
+  </div>
 `
 
 function setupSiteNav(): void {
@@ -78,15 +102,16 @@ function setupSiteNav(): void {
 }
 
 setupDownloadModal()
-setupMediaGallery()
-setupScreenshotLightbox()
+if (page === 'home') {
+  setupMediaGallery()
+  setupScreenshotLightbox()
+}
 setupSiteNav()
 
-// Animate on scroll – smooth, run once per element
 AOS.init({
   duration: 700,
   easing: 'ease-out-cubic',
   offset: 60,
   once: true,
-  delay: 0
+  delay: 0,
 })

@@ -10,7 +10,7 @@ const TRANSITION_MS = 320
 /**
  * Starts the file download without opening a new tab.
  * Uses a temporary in-page link; the browser stays on this site while the download runs
- * (GitHub serves the asset with Content-Disposition: attachment).
+ * (Host should respond with Content-Disposition: attachment.)
  */
 function executeDownload(): void {
   const link = document.createElement('a')
@@ -44,7 +44,7 @@ export function closeDownloadModal(): void {
   panel?.classList.add(...PANEL_CLOSED)
 
   root.classList.remove('opacity-100', 'pointer-events-auto')
-  root.classList.add('opacity-0', 'pointer-events-none')
+  root.classList.add('opacity-0', 'pointer-events-none', 'invisible')
   root.setAttribute('aria-hidden', 'true')
 
   window.setTimeout(() => {
@@ -75,7 +75,7 @@ export function openDownloadModal(): void {
   root.setAttribute('aria-hidden', 'false')
   document.body.classList.add('overflow-hidden')
 
-  root.classList.remove('opacity-0', 'pointer-events-none')
+  root.classList.remove('opacity-0', 'pointer-events-none', 'invisible')
   root.classList.add('opacity-100', 'pointer-events-auto')
 
   requestAnimationFrame(() => {
@@ -101,7 +101,7 @@ export function setupDownloadModal(): void {
   root.id = 'download-modal-root'
   root.className = [
     'fixed inset-0 z-[200] flex items-end sm:items-center justify-center p-0 sm:p-4',
-    'opacity-0 pointer-events-none transition-opacity duration-300 ease-out',
+    'invisible opacity-0 pointer-events-none transition-opacity duration-300 ease-out',
   ].join(' ')
   root.setAttribute('aria-hidden', 'true')
 
@@ -206,7 +206,7 @@ export function setupDownloadModal(): void {
 
   document.addEventListener('keydown', (e) => {
     if (e.key !== 'Escape') return
-    if (root.classList.contains('opacity-0')) return
+    if (root.classList.contains('invisible') || root.classList.contains('opacity-0')) return
     closeDownloadModal()
   })
 }

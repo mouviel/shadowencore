@@ -34,7 +34,7 @@ export function setupScreenshotLightbox(): void {
   const overlay = document.createElement('div')
   overlay.id = 'screenshot-lightbox-overlay'
   overlay.className =
-    'fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/85 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-200'
+    'fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/85 backdrop-blur-sm invisible opacity-0 pointer-events-none transition-opacity duration-200'
   overlay.setAttribute('role', 'dialog')
   overlay.setAttribute('aria-modal', 'true')
   overlay.setAttribute('aria-label', 'Screenshot enlarged')
@@ -51,7 +51,7 @@ export function setupScreenshotLightbox(): void {
 
   const imgEl = overlay.querySelector<HTMLImageElement>('[data-lightbox-img]')!
   const close = () => {
-    overlay.classList.add('opacity-0', 'pointer-events-none')
+    overlay.classList.add('opacity-0', 'pointer-events-none', 'invisible')
     overlay.classList.remove('opacity-100')
     const fig = overlay.querySelector('figure')
     fig?.classList.add('scale-95')
@@ -62,7 +62,7 @@ export function setupScreenshotLightbox(): void {
   const open = (src: string, alt: string) => {
     imgEl.src = src
     imgEl.alt = alt
-    overlay.classList.remove('opacity-0', 'pointer-events-none')
+    overlay.classList.remove('opacity-0', 'pointer-events-none', 'invisible')
     overlay.classList.add('opacity-100')
     const fig = overlay.querySelector('figure')
     fig?.classList.remove('scale-95')
@@ -76,7 +76,7 @@ export function setupScreenshotLightbox(): void {
     close()
   })
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && overlay.classList.contains('opacity-100')) close()
+    if (e.key === 'Escape' && !overlay.classList.contains('invisible')) close()
   })
 
   document.querySelectorAll<HTMLElement>('.screenshot-lightbox').forEach((el) => {

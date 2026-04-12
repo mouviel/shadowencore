@@ -1,20 +1,28 @@
-export function Header(): string {
+import type { SitePage } from '../routes.ts'
+import { desktopNavClass, routes } from '../routes.ts'
+
+export function Header(page: SitePage): string {
+  const idle = desktopNavClass(false)
+
   return `
     <header class="fixed top-0 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm" id="top">
-        <nav class="mt-2 md:mt-4 relative max-w-5xl w-full bg-gradient-to-r from-cyan-50 via-teal-50 to-blue-100 dark:from-slate-800 dark:via-purple-900/30 dark:to-blue-900/40 backdrop-blur-lg bg-opacity-95 dark:bg-opacity-95 border border-cyan-200/60 dark:border-purple-600/40 rounded-[20px] md:rounded-[28px] mx-2 flex flex-wrap md:flex-nowrap items-center justify-between p-2 md:p-1 ps-4 md:ps-5 md:py-0 sm:mx-auto shadow-lg shadow-cyan-500/10 dark:shadow-purple-900/20">
+        <nav class="mt-2 md:mt-4 relative max-w-6xl w-full bg-gradient-to-r from-cyan-50 via-teal-50 to-blue-100 dark:from-slate-800 dark:via-purple-900/30 dark:to-blue-900/40 backdrop-blur-lg bg-opacity-95 dark:bg-opacity-95 border border-cyan-200/60 dark:border-purple-600/40 rounded-[20px] md:rounded-[28px] mx-2 flex flex-wrap md:flex-nowrap items-center justify-between p-2 md:p-1 ps-4 md:ps-5 md:py-0 sm:mx-auto shadow-lg shadow-cyan-500/10 dark:shadow-purple-900/20">
             <div class="flex items-center min-w-0 flex-1 md:flex-none">
-            <a class="flex-none rounded-md text-base md:text-lg inline-block font-bold focus:outline-hidden focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900 text-gray-800 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300 truncate" href="#top" aria-label="Razor Shard — home">
+            <a class="flex-none rounded-md text-base md:text-lg inline-block font-bold focus:outline-hidden focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900 text-gray-800 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300 truncate" href="${routes.home}" aria-label="Razor Shard — home">
                 <span class="hidden xs:inline">RAZOR SHARD</span>
                 <span class="xs:hidden">RS</span>
             </a>
             <div class="ms-1 sm:ms-2"></div>
             </div>
 
-            <div class="hidden md:flex items-center gap-1 md:gap-2 flex-1 justify-center min-w-0 px-2">
-              <a class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-white/60 dark:hover:bg-slate-700/50 transition-colors" href="#about">About</a>
-              <a class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-white/60 dark:hover:bg-slate-700/50 transition-colors" href="#features">Features</a>
-              <a class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-white/60 dark:hover:bg-slate-700/50 transition-colors" href="#requirements">Requirements</a>
-              <a class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-white/60 dark:hover:bg-slate-700/50 transition-colors" href="#screenshots">Screenshots</a>
+            <div class="hidden md:flex flex-wrap items-center gap-1 lg:gap-2 flex-1 justify-center min-w-0 px-1 lg:px-2">
+              <a class="${idle}" href="${routes.about}">About</a>
+              <a class="${idle}" href="${routes.features}">Features</a>
+              <a class="${idle}" href="${routes.requirements}">Requirements</a>
+              <a class="${idle}" href="${routes.screenshots}">Screenshots</a>
+              <a class="${desktopNavClass(page === 'faq')}" href="${routes.faq}" ${page === 'faq' ? 'aria-current="page"' : ''}>FAQ</a>
+              <a class="${desktopNavClass(page === 'changelog')}" href="${routes.changelog}" ${page === 'changelog' ? 'aria-current="page"' : ''}>Updates</a>
+              <a class="${desktopNavClass(page === 'privacy')}" href="${routes.privacy}" ${page === 'privacy' ? 'aria-current="page"' : ''}>Privacy</a>
             </div>
 
             <div class="flex items-center gap-1 md:order-4 md:ms-4">
@@ -42,10 +50,13 @@ export function Header(): string {
                 <button type="button" onclick="downloadGame()" class="w-full py-3 px-4 bg-gradient-to-r from-emerald-500 to-green-600 text-white rounded-xl font-semibold text-center shadow-md mb-2">
                     Download Razor Shard
                 </button>
-                <a class="py-3 px-4 rounded-xl font-medium text-gray-800 dark:text-gray-100 hover:bg-white/70 dark:hover:bg-slate-700/50 transition-colors mobile-nav-link" href="#about">About</a>
-                <a class="py-3 px-4 rounded-xl font-medium text-gray-800 dark:text-gray-100 hover:bg-white/70 dark:hover:bg-slate-700/50 transition-colors mobile-nav-link" href="#features">Features</a>
-                <a class="py-3 px-4 rounded-xl font-medium text-gray-800 dark:text-gray-100 hover:bg-white/70 dark:hover:bg-slate-700/50 transition-colors mobile-nav-link" href="#requirements">Requirements</a>
-                <a class="py-3 px-4 rounded-xl font-medium text-gray-800 dark:text-gray-100 hover:bg-white/70 dark:hover:bg-slate-700/50 transition-colors mobile-nav-link" href="#screenshots">Screenshots</a>
+                <a class="py-3 px-4 rounded-xl font-medium text-gray-800 dark:text-gray-100 hover:bg-white/70 dark:hover:bg-slate-700/50 transition-colors mobile-nav-link" href="${routes.about}">About</a>
+                <a class="py-3 px-4 rounded-xl font-medium text-gray-800 dark:text-gray-100 hover:bg-white/70 dark:hover:bg-slate-700/50 transition-colors mobile-nav-link" href="${routes.features}">Features</a>
+                <a class="py-3 px-4 rounded-xl font-medium text-gray-800 dark:text-gray-100 hover:bg-white/70 dark:hover:bg-slate-700/50 transition-colors mobile-nav-link" href="${routes.requirements}">Requirements</a>
+                <a class="py-3 px-4 rounded-xl font-medium text-gray-800 dark:text-gray-100 hover:bg-white/70 dark:hover:bg-slate-700/50 transition-colors mobile-nav-link" href="${routes.screenshots}">Screenshots</a>
+                <a class="py-3 px-4 rounded-xl font-medium text-gray-800 dark:text-gray-100 hover:bg-white/70 dark:hover:bg-slate-700/50 transition-colors mobile-nav-link" href="${routes.faq}">FAQ</a>
+                <a class="py-3 px-4 rounded-xl font-medium text-gray-800 dark:text-gray-100 hover:bg-white/70 dark:hover:bg-slate-700/50 transition-colors mobile-nav-link" href="${routes.changelog}">Changelog</a>
+                <a class="py-3 px-4 rounded-xl font-medium text-gray-800 dark:text-gray-100 hover:bg-white/70 dark:hover:bg-slate-700/50 transition-colors mobile-nav-link" href="${routes.privacy}">Privacy &amp; cookies</a>
             </div>
             </div>
         </nav>
